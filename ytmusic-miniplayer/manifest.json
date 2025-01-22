@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music Miniplayer",
+  "version": "1.0",
+  "description": "Forces the YouTube Music miniplayer",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://music.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
