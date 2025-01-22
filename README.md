@@ -1,6 +1,18 @@
 # YouTube Music Miniplayer Extension
 
-A simple browser extension for automatically forcing YouTube Music to always play in the miniplayer mode whenever a song is clicked. This is designed to avoid the full-screen video mode and make your listening experience more compact and enjoyable.
+A simple browser extension for automatically forcing YouTube Music to always play in the miniplayer mode whenever a song is clicked. This is designed to avoid the full-screen video mode and make your listening experience more compact and enjoyable. 
+
+## Warning
+
+Currently the script searches for a button named "Åpne minispilleren" in norwegian. This WILL vary from language to language, so make sure to change it in **content.js**:
+
+```js
+const miniPlayerButton = document.querySelector('tp-yt-paper-icon-button[title="Whatever-the-closebutton-is-called-in-your-language"] tp-yt-iron-icon');
+```
+
+## Disclaimer
+
+This script is fully coded by chatgpt
 
 ## Features
 
@@ -8,7 +20,6 @@ A simple browser extension for automatically forcing YouTube Music to always pla
 - Minimal user interaction required.
 - Customizable delay to ensure proper loading before forcing miniplayer.
 - Prevents excessive triggers using a debounce mechanism.
-- Works seamlessly while the user interacts with YouTube Music.
 
 ## Installation
 
@@ -57,4 +68,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgements
 
-Thanks to chatgpt for cooking this all in 5 minutes.
+Thanks to chatgpt for cooking this all in literally like 5 minutes.
